@@ -1,9 +1,12 @@
 # Project Tropical - Analysis
 
 ## Description
+
 Data analysis and visualization notebooks, data extraction and transformation scripts of Project Tropical.
 
 ## Project Structure
+
+```
 tropical/analysis/
 │
 ├── README.md                # Folder description, instructions, and documentation
@@ -23,6 +26,8 @@ tropical/analysis/
 ├── .gitignore               # List of files and folders to be ignored by Git
 ├── environment.yml          # Conda environment file for managing dependencies
 └── README.md                # Folder description, instructions, and documentation
+```
+
 ## Installations
 
 **Note: Below installation steps must be done in `tropical/analysis`**
