@@ -23,15 +23,24 @@ class LWClient:
         }
 
     def build_api_path(self, path: str) -> str:
+        """
+        Build API path from base_url and path.
+        """
         return f"{self.base_url}{path}"
 
     def get(self, path, params) -> any:
+        """
+        GET request to LW API through CS Platform proxy.
+        """
         response = requests.get(
             self.base_url, params={"path": path, **params}, headers=self.headers
         )
         return response.json()
 
     def get_all_courses(self) -> list:
+        """
+        Get all courses from LW API.
+        """
         return self.get(GET_ALL_COURSES, {})
 
 
