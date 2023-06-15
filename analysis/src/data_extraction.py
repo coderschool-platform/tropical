@@ -8,6 +8,12 @@ from constants.api_paths import GET_ALL_COURSES
 
 
 class LWClient:
+    """
+    Class for getting data from LearnWorlds API.
+
+    Connection to LW API is established using a proxy through CS Platform.
+    """
+
     def __init__(self) -> None:
         self.base_url = os.getenv("BASE_URL")
         PLATFORM_APP_TOKEN = os.getenv("PLATFORM_APP_TOKEN")
@@ -29,5 +35,7 @@ class LWClient:
         return self.get(GET_ALL_COURSES, {})
 
 
-client = LWClient()
-print(client.get_all_courses())
+if __name__ == "__main__":
+    # Test API connection
+    client = LWClient()
+    print(client.get_all_courses())
